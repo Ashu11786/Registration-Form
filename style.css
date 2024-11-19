@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General form styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid rgb(152, 215, 230);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #3b3838;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+    font-size: 1.2em;
+}
+
+/* Style for error messages */
+
+.error-message {
+    font-size: 0.9em;
+    color: red;
+    margin-top: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Responsive row for gender and DOB */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.row .form-group {
+    flex: 1;
+}
+
+/* Terms and Conditions */
+.terms {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional Preferences Fieldset */
+fieldset {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label input {
+    margin-right: 10px;
+}
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 10px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
